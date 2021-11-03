@@ -1,4 +1,4 @@
-# OOP-Java
+# OOP-Java - code from Professor Viroli
 
 This repository will contain all java code that I made in my exercises during class.
 There will be several branches:
