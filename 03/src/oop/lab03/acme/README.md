@@ -1,0 +1,2 @@
+La mia soluzione si basa in parte su quella del professor Casadei, in quanto mi sono bloccato nel realizzare la gestione degli studenti e dei professori. 
+In particolare mi riferisco all'array courses.
