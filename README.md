@@ -1,4 +1,4 @@
-# OOP-Java
+# OOP-Java - code from Professor Viroli
 
 # Section: Code in lessons (code made by professor Mirko Viroli)
 
