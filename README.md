@@ -4,5 +4,4 @@ This repository will contain all java code that I made in my exercises during cl
 There will be several branches:
 - Exercises (mine)
 - Code in lessons (code made by professor Mirko Viroli)
-- Ideas
-- JavaFX
+- Personal Tests
