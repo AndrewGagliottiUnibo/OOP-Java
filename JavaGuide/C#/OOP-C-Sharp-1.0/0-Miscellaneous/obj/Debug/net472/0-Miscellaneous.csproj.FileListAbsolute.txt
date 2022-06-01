@@ -1,0 +1,8 @@
+C:\Users\andre\Desktop\OOP\Teoria\Settimana12\OOP-C-Sharp-1.0\0-Miscellaneous\bin\Debug\net472\Miscellaneous.dll
+C:\Users\andre\Desktop\OOP\Teoria\Settimana12\OOP-C-Sharp-1.0\0-Miscellaneous\bin\Debug\net472\Miscellaneous.pdb
+C:\Users\andre\Desktop\OOP\Teoria\Settimana12\OOP-C-Sharp-1.0\0-Miscellaneous\obj\Debug\net472\0-Miscellaneous.csprojAssemblyReference.cache
+C:\Users\andre\Desktop\OOP\Teoria\Settimana12\OOP-C-Sharp-1.0\0-Miscellaneous\obj\Debug\net472\0-Miscellaneous.AssemblyInfoInputs.cache
+C:\Users\andre\Desktop\OOP\Teoria\Settimana12\OOP-C-Sharp-1.0\0-Miscellaneous\obj\Debug\net472\0-Miscellaneous.AssemblyInfo.cs
+C:\Users\andre\Desktop\OOP\Teoria\Settimana12\OOP-C-Sharp-1.0\0-Miscellaneous\obj\Debug\net472\0-Miscellaneous.csproj.CoreCompileInputs.cache
+C:\Users\andre\Desktop\OOP\Teoria\Settimana12\OOP-C-Sharp-1.0\0-Miscellaneous\obj\Debug\net472\Miscellaneous.dll
+C:\Users\andre\Desktop\OOP\Teoria\Settimana12\OOP-C-Sharp-1.0\0-Miscellaneous\obj\Debug\net472\Miscellaneous.pdb

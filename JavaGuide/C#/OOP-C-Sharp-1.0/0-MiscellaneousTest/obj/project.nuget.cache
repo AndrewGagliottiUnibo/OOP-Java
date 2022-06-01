@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "Xso6/7XVH4oBrMo5N6J0dS5DkFwHWghdHrNgH4pikjf5/izP+fPf+omg7+VuughAPzbmsj2i8/xEHHdbl4DXgg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\andre\\Desktop\\OOP\\Teoria\\Settimana12\\OOP-C-Sharp-1.0\\0-MiscellaneousTest\\0-MiscellaneousTest.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\andre\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
+    "C:\\Users\\andre\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
+    "C:\\Users\\andre\\.nuget\\packages\\microsoft.net.test.sdk\\16.5.0\\microsoft.net.test.sdk.16.5.0.nupkg.sha512",
+    "C:\\Users\\andre\\.nuget\\packages\\mstest.testadapter\\2.1.0\\mstest.testadapter.2.1.0.nupkg.sha512",
+    "C:\\Users\\andre\\.nuget\\packages\\mstest.testframework\\2.1.0\\mstest.testframework.2.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
