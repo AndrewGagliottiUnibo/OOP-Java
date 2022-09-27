@@ -1,4 +1,4 @@
-package oop.lab02.constructors;
+package main.java;
 
 class Train {
 
@@ -6,11 +6,39 @@ class Train {
     static final int DEFAULT_N_SC_SEATS = 100;
     static final int DEFAULT_TOT_SEATS = 150;
 
+    /**
+     * Empty constructor.
+     */
+    public Train() {
+        this.seats = DEFAULT_TOT_SEATS;
+        this.firstClassSeats = DEFAULT_N_FC_SEATS;
+        this.secondClassSeats = DEFAULT_N_SC_SEATS;
+        this.firstClassReserved = 0;
+        this.secondClassReserved = 0;
+    }
+
+    /**
+     * Overload constructor.
+     * @param totSeats
+     * @param firstClassSeats
+     * @param secondClassSeats
+     * @param firstClassReservedSeats
+     * @param secondClassReservedSeats
+     */
+    public Train(final int totSeats, final int firstClassSeats, final int secondClassSeats,
+            final int firstClassReservedSeats, final int secondClassReservedSeats) {
+                this.seats = totSeats;
+                this.firstClassSeats = firstClassSeats;
+                this.secondClassSeats = secondClassSeats;
+                this.firstClassReserved = firstClassReserved;
+                this.secondClassReserved = secondClassReserved; 
+    }
+
     int seats;
     int firstClassSeats;
     int secondClassSeats;
-    int firstClassReserved;
-    int secondClassReserved;
+    int firstClassReservedSeats;
+    int secondClassReservedSeats;
 
     void deleteAllReservations() {
         this.firstClassReserved = 0;

@@ -1,4 +1,4 @@
-package oop.lab02.constructors;
+package src.main.java;
 
 class Student {
 
@@ -7,12 +7,19 @@ class Student {
     int id;
     int matriculationYear;
 
-    void build(final int id, final String name, final String surname, final int matriculationYear) {
+    public Student(final int id, final String name, final String surname, final int matriculationYear) {
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.matriculationYear = matriculationYear;
     }
+
+/*      void build(final int id, final String name, final String surname, final int matriculationYear) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.matriculationYear = matriculationYear;
+    } */
 
     void printStudentInfo() {
         System.out.println("Student id: " + this.id);
@@ -21,7 +28,7 @@ class Student {
         System.out.println("Student matriculationYear: " + this.matriculationYear + "\n");
     }
 
-    public static void main(final String[] args) {
+/*     public static void main(final String[] args) {
         final Student marioRossi = new Student();
         marioRossi.build(1014, "Mario", "Rossi", 2013);
         marioRossi.printStudentInfo();
@@ -37,5 +44,5 @@ class Student {
         final Student andreaBracci = new Student();
         andreaBracci.build(1017, "Andrea", "Bracci", 2012);
         andreaBracci.printStudentInfo();
-    }
+    } */
 }
