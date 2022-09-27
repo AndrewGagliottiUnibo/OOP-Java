@@ -3,6 +3,7 @@ package it.unibo.cli.arguments.test;
 class TestCommandLine {
 
     public static void main(final String[] args) {
+        
         /*
          * Write the main method in such a way that it iterates through the
          * array of arguments, printing each one along with the length of the
@@ -22,5 +23,17 @@ class TestCommandLine {
          *  * the, 3 characters long
          *  * lab, 3 characters long
          */
+
+        //format
+        String[] input = args;
+
+        System.out.println("\n\n");
+        for(String elem : input) {
+            System.out.println("Elem: " + elem + " and it's lenght: " + elem.length() + "\n");
+        }
+
+        //format
+        System.out.println("\n\n");
+
     }
 }
