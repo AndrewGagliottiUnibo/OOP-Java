@@ -3,7 +3,7 @@ package it.unibo.cli.arguments.test;
 class TestCommandLine {
 
     public static void main(final String[] args) {
-        
+
         /*
          * Write the main method in such a way that it iterates through the
          * array of arguments, printing each one along with the length of the
@@ -18,21 +18,21 @@ class TestCommandLine {
          * $ java oop.lab02.cli.TestCommandLine Welcome to the lab
          *
          * The provided arguments are:
-         *  * Welcome, 7 characters long
-         *  * to, 2 characters long
-         *  * the, 3 characters long
-         *  * lab, 3 characters long
+         * * Welcome, 7 characters long
+         * * to, 2 characters long
+         * * the, 3 characters long
+         * * lab, 3 characters long
          */
 
-        //format
+        // format
         String[] input = args;
 
         System.out.println("\n\n");
-        for(String elem : input) {
+        for (String elem : input) {
             System.out.println("Elem: " + elem + " and it's lenght: " + elem.length() + "\n");
         }
 
-        //format
+        // format
         System.out.println("\n\n");
 
     }
