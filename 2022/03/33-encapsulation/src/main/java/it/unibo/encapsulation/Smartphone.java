@@ -46,6 +46,9 @@ public class Smartphone {
         this(DEF_N_CPU, DEF_RAM_SIZE, DEF_SD_SIZE, brand, model, hasGPS, has3G, DEF_HAS_NFC);
     }
 
+    /*
+     * Getters here.
+     */
     public int getCPUCount() {
         return this.cpuCount;
     }
