@@ -49,7 +49,7 @@ public class SimpleBankAccount implements BankAccount {
          * conto Nota: il deposito va a buon fine solo se l'id utente
          * corrisponde
          */
-        if(this.id == id) {
+        if (this.id == id) {
             this.balance += amount;
             this.transactions++;
         }
@@ -61,7 +61,7 @@ public class SimpleBankAccount implements BankAccount {
          * conto. Note: - Il conto puo' andare in rosso (ammontare negativo) -
          * Il prelievo va a buon fine solo se l'id utente corrisponde
          */
-        if(this.id == id) {
+        if (this.id == id) {
             this.balance -= amount;
             this.transactions++;
         }
@@ -74,7 +74,7 @@ public class SimpleBankAccount implements BankAccount {
          * all'uso dell'ATM (bancomat) Nota: il deposito va a buon fine solo se
          * l'id utente corrisponde
          */
-        if(this.id == id) {
+        if (this.id == id) {
             this.balance += (amount - ATM_TRANSACTION_FEE);
             this.transactions++;
         }
@@ -88,7 +88,7 @@ public class SimpleBankAccount implements BankAccount {
          * negativo) - Il prelievo va a buon fine solo se l'id utente
          * corrisponde
          */
-        if(this.id == id) {
+        if (this.id == id) {
             this.balance -= (amount + ATM_TRANSACTION_FEE);
             this.transactions++;
         }

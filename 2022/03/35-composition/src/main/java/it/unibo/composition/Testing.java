@@ -5,8 +5,8 @@ public class Testing {
     public static void main(final String[] args) {
 
         // Courses
-        String[] course1 = {"Sociologia", "Vita da Strada"};
-        String[] course2 = {"OOP", "SO"};
+        String[] course1 = { "Sociologia", "Vita da Strada" };
+        String[] course2 = { "OOP", "SO" };
 
         // 1)Creare 3 studenti a piacere
         User student1 = new Student(1000, "Pluto", "Pluty", "ff", 2022);

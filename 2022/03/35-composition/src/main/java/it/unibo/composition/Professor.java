@@ -12,7 +12,8 @@ public class Professor implements User {
     private final String password;
     private String[] courses;
 
-    public Professor(final int id, final String name, final String surname, final String password, final String[] courses) {
+    public Professor(final int id, final String name, final String surname, final String password,
+            final String[] courses) {
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -34,7 +35,7 @@ public class Professor implements User {
 
     // New methods here
     public void replaceCourse(final String course, final int position) {
-        if(position < this.courses.length) {
+        if (position < this.courses.length) {
             this.courses[position] = course;
         } else {
             System.out.println("No");
@@ -65,9 +66,9 @@ public class Professor implements User {
     @Override
     public String toString() {
         return "Professor ["
-            + "name=" + this.name
-            + ", surname=" + this.surname
-            + ", id=" + this.id
-            + "] " + "[Courses: " + Arrays.toString(courses) + "]";
+                + "name=" + this.name
+                + ", surname=" + this.surname
+                + ", id=" + this.id
+                + "] " + "[Courses: " + Arrays.toString(courses) + "]";
     }
 }

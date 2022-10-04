@@ -1,4 +1,5 @@
 package it.unibo.encapsulation.interfaces;
+
 public class StrictBankAccount implements BankAccount {
 
     private static final double ATM_TRANSACTION_FEE = 1;

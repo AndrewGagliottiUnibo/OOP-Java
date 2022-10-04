@@ -18,7 +18,7 @@ public class Smartphone {
     private final boolean has3G;
     private final boolean hasNFC;
 
-    public Smartphone(final int cpuCount, final int ram, final int sdSize, final String brand, 
+    public Smartphone(final int cpuCount, final int ram, final int sdSize, final String brand,
             final String model, final boolean hasGPS, final boolean has3G, final boolean hasNFC) {
         this.cpuCount = cpuCount;
         this.ram = ram;
