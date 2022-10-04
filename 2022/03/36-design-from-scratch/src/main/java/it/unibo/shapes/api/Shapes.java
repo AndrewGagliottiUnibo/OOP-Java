@@ -1,7 +1,7 @@
 package it.unibo.shapes.api;
 
 public interface Shapes {
-    
+
     /**
      * @return perimeter value.
      */

@@ -6,7 +6,7 @@ public class Circle implements Shapes {
 
     private static final double PI = Math.PI;
     private final double radius;
-    
+
     public Circle(final double radius) {
         this.radius = radius;
     }
