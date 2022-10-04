@@ -35,9 +35,9 @@ public class Triangle implements Polygon {
     @Override
     public String toString() {
         return "Triangle [base=" + base + ", wide1=" + wide1 + ", wide2=" + wide2 + ", height=" + height + "]\n"
-        + "[Perimeter = " + this.computePerimeter() + "]\n"
-        + "[Area = " + this.computeArea() + "]\n"
-        + "[Edges = " + this.getEdgeCount() +"]\n\n";
+                + "[Perimeter = " + this.computePerimeter() + "]\n"
+                + "[Area = " + this.computeArea() + "]\n"
+                + "[Edges = " + this.getEdgeCount() + "]\n\n";
     }
 
 }

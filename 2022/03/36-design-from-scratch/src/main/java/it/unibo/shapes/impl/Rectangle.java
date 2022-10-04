@@ -31,9 +31,9 @@ public class Rectangle implements Polygon {
     @Override
     public String toString() {
         return "Rectangle [lenght=" + lenght + ", height=" + height + "]\n"
-        + "[Perimeter = " + this.computePerimeter() + "]\n"
-        + "[Area = " + this.computeArea() + "]\n"
-        + "[Edges = " + this.getEdgeCount() +"]\n\n";
+                + "[Perimeter = " + this.computePerimeter() + "]\n"
+                + "[Area = " + this.computeArea() + "]\n"
+                + "[Edges = " + this.getEdgeCount() + "]\n\n";
     }
 
 }

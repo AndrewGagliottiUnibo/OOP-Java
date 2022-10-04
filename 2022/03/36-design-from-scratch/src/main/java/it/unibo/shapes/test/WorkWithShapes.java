@@ -18,14 +18,15 @@ public class WorkWithShapes {
     private static final double TRIANGLE_WIDE_2 = 6d;
     private static final double TRIANGLE_H = 4d;
 
-    private WorkWithShapes() { }
+    private WorkWithShapes() {
+    }
 
     public static void main(final String[] args) {
         final Shapes circle = new Circle(CIRCLE_RADIUS);
         final Polygon square = new Square(SQUARE_WIDE);
         final Polygon rectangle = new Rectangle(RECTANGLE_WIDTH, RECTANGLE_HEIGHT);
         final Polygon triangle = new Triangle(TRIANGLE_BASE_1, TRIANGLE_WIDE_1, TRIANGLE_WIDE_2, TRIANGLE_H);
-        
+
         System.out.println(circle.toString());
         System.out.println(square.toString());
         System.out.println(rectangle.toString());
