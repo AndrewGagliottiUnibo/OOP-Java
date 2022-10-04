@@ -17,7 +17,7 @@ public class Professor implements User {
         this.name = name;
         this.surname = surname;
         this.password = password;
-        this.courses = courses;
+        this.courses = Arrays.copyOf(courses, courses.length);
     }
 
     public String getName() {
