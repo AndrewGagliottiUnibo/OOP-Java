@@ -25,4 +25,13 @@ public class Square implements Polygon {
     public int getEdgeCount() {
         return N_EDGES;
     }
+
+    @Override
+    public String toString() {
+        return "Square [wide=" + wide + "]\n"
+        + "[Perimeter = " + this.computePerimeter() + "]\n"
+        + "[Area = " + this.computeArea() + "]\n"
+        + "[Edges = " + this.getEdgeCount() +"]\n\n";
+    }
+
 }

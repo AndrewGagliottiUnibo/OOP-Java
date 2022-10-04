@@ -20,4 +20,11 @@ public class Circle implements Shapes {
     public double computeArea() {
         return PI * Math.sqrt(this.radius);
     }
+
+    @Override
+    public String toString() {
+        return "Circle [Radius=" + radius + "]\n"
+        + "[Perimeter = " + this.computePerimeter() + "]\n"
+        + "[Area = " + this.computeArea() + "]\n\n";
+    }
 }
