@@ -25,11 +25,12 @@ public class AccountHolder {
     }
 
     public String toString() {
-        // Should print name, surname, and account id.
-        return null;
+        return "Proprietario account: " + this.getName() + " " + this.getSurname() + "\n"
+                + "Numero account: " + this.getUserID();
     }
 
     public static void main(final String[] args) {
-        System.out.println(new AccountHolder("Alex", "Ghini", 42));
+        AccountHolder acc = new AccountHolder("Alex", "Ghini", 42);
+        System.out.println(acc.toString());
     }
 }
