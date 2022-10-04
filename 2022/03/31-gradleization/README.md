@@ -16,11 +16,12 @@ Follow the steps below:
     - Create a file named `settings.gradle.kts`
     - The file content should be `rootProject.name = "gradleized-project"`
 4. The project is now a Gradle project, verify that the build system is enabled:
-    - `./gradlew tasks --all` (on Windows, `gradlew.bat tasks`)
+    - `./gradlew tasks --all`(and git bash and Linux) (on Windows, `gradlew.bat tasks`)
 5. Configure Gradle for Java
     - Create a file named `build.gradle.kts`
     - The file content should be `plugins { java }`
 6. Verify that the project can compile via Gradle
     - `./gradlew compileJava`
     - Check the contents of the `build` folder, find where Gradle compiles
-7. Use `java` to run `WorkWithArrays`
+7. Use `java` to run `WorkWithArrays` - java src/main/java/it/unibo/arrays/WorkWithArrays.java
+
