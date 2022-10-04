@@ -15,25 +15,25 @@ public class Student {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public String getSurname() {
-        return surname;
+        return this.surname;
     }
 
     public int getId() {
-        return id;
+        return this.id;
     }
 
     public int getMatriculationYear() {
-        return matriculationYear;
+        return this.matriculationYear;
     }
 
     public void printStudentInfo() {
-        System.out.println("Student id: " + this.id);
-        System.out.println("Student name: " + this.name);
-        System.out.println("Student surname: " + this.surname);
-        System.out.println("Student matriculationYear: " + this.matriculationYear + "\n");
+        System.out.println("Student id: " + this.getId());
+        System.out.println("Student name: " + this.getName());
+        System.out.println("Student surname: " + this.getSurname());
+        System.out.println("Student matriculationYear: " + this.getMatriculationYear() + "\n");
     }
 }
