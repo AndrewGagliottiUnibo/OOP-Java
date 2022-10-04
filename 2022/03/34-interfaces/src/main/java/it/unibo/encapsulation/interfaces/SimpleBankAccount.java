@@ -20,7 +20,6 @@ public class SimpleBankAccount implements BankAccount {
      * dell'utente) ed un double (ossia, l'ammontare iniziale del conto corrente).
      */
     public SimpleBankAccount(final int id, final double balance) {
-        this.balance = 0.0;
         this.id = id;
         this.balance = balance;
         this.transactions = 0;
@@ -52,6 +51,7 @@ public class SimpleBankAccount implements BankAccount {
          */
         if(this.id == id) {
             this.balance += amount;
+            this.transactions++;
         }
     }
 
@@ -63,6 +63,7 @@ public class SimpleBankAccount implements BankAccount {
          */
         if(this.id == id) {
             this.balance -= amount;
+            this.transactions++;
         }
     }
 
@@ -75,6 +76,7 @@ public class SimpleBankAccount implements BankAccount {
          */
         if(this.id == id) {
             this.balance += (amount - ATM_TRANSACTION_FEE);
+            this.transactions++;
         }
     }
 
@@ -88,6 +90,7 @@ public class SimpleBankAccount implements BankAccount {
          */
         if(this.id == id) {
             this.balance -= (amount + ATM_TRANSACTION_FEE);
+            this.transactions++;
         }
     }
 
@@ -98,6 +101,7 @@ public class SimpleBankAccount implements BankAccount {
         System.out.println("No management fees per utente " + this.id);
     }
 
+    @Override
     public String toString() {
         return "User: " + this.id + "\n"
                 + "Balance: " + this.getBalance() + "\n"
