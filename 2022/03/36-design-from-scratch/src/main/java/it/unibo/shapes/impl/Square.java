@@ -25,5 +25,4 @@ public class Square implements Polygon {
     public int getEdgeCount() {
         return N_EDGES;
     }
-
 }
