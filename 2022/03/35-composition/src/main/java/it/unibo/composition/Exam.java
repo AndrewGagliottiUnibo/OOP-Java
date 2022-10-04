@@ -12,20 +12,23 @@ public class Exam {
     Student[] students;
 
     public Exam(final int id, final String courseName, final int maxStudents,
-            final Professor professor, final ExamRoom room, final Student[] students) {
+            final Professor professor, final ExamRoom room) {
         this.id = id;
         this.courseName = courseName;
         this.maxStudents = maxStudents;
         this.registeredStudents = 0;
         this.professor = professor;
         this.room = room;
-        this.students = Arrays.copyOf(this.students, this.students.length);
+        this.students = new Student[this.maxStudents];
     }
 
     public void registerStudent(final Student student) {
         if (this.registeredStudents < this.maxStudents) {
             this.students = Arrays.copyOf(this.students, this.students.length + 1);
-            this.students[this.students.length - 1] = student;
+            this.students[registeredStudents] = student;
+            this.registeredStudents++;
+        } else {
+            System.out.println("No\n");
         }
     }
 
@@ -35,6 +38,6 @@ public class Exam {
                 + ", maxStudents=" + this.maxStudents
                 + ", registeredStudents=" + this.registeredStudents
                 + ", professor=" + this.professor + ", room=" + this.room
-                + ", students=" + Arrays.toString(this.students) + "]";
+                + ", students=" + Arrays.toString(this.students) + "]\n";
     }
 }
