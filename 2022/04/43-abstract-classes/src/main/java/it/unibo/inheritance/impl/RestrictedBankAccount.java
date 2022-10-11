@@ -6,7 +6,7 @@ public class RestrictedBankAccount extends AbstractBankAccount {
 
     private static final double TRANSACTION_FEE = 0.1;
 
-    public RestrictedBankAccount(final AccountHolder holder,  final double balance) {
+    public RestrictedBankAccount(final AccountHolder holder, final double balance) {
         super(holder, balance);
     }
 

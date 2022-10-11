@@ -3,11 +3,12 @@ package it.unibo.inheritance.impl;
 import it.unibo.inheritance.api.AccountHolder;
 
 public class ClassicBankAccount extends AbstractBankAccount {
-    
+
     private static final double MANAGEMENT_FEE = 5;
 
     /**
      * Constructor.
+     * 
      * @param holder
      * @param balance
      */

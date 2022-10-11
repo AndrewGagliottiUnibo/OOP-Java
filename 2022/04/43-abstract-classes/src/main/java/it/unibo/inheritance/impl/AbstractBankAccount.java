@@ -14,10 +14,11 @@ public abstract class AbstractBankAccount implements BankAccount {
 
     /**
      * Constructor.
+     * 
      * @param holder
      * @param balance
      */
-    protected AbstractBankAccount(final AccountHolder holder, final double balance) { 
+    protected AbstractBankAccount(final AccountHolder holder, final double balance) {
         this.holder = holder;
         this.balance = balance;
         this.transactions = 0;
@@ -97,5 +98,5 @@ public abstract class AbstractBankAccount implements BankAccount {
     protected abstract boolean isWithDrawAllowed(final double amount);
 
     protected abstract double computeFee();
-    
+
 }
