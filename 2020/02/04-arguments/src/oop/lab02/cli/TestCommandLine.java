@@ -16,24 +16,24 @@ public class TestCommandLine {
          * method that returns the length of the String.
          * 
          * Example output:
-
-
-           java oop.lab02.cli.TestCommandLine it's a trap
-
-           The provided arguments are:
-            * it's, 4 characters long
-            * a, 1 characters long
-            * trap, 4 characters long
-
-
+         * 
+         * 
+         * java oop.lab02.cli.TestCommandLine it's a trap
+         * 
+         * The provided arguments are:
+         * it's, 4 characters long
+         * a, 1 characters long
+         * trap, 4 characters long
+         * 
+         * 
          */
-        //se non passo argomenti non faccio nulla
-        //se ho argomenti li stampo e ne stampo la lunghezza.
+        // se non passo argomenti non faccio nulla
+        // se ho argomenti li stampo e ne stampo la lunghezza.
         if (args.length == 0) {
             System.out.println("No argument has been provided.");
         } else {
             System.out.println("The provided arguments are:");
-            for (final String arg: args) {
+            for (final String arg : args) {
                 System.out.println(" * " + arg + ", " + arg.length() + " characters long");
             }
         }

@@ -1,9 +1,9 @@
 class CallByReference1 {
 
     void increment(final Point3D p) {
-        p.x++;  //2
-        p.y++;  //3
-        p.z++;  //4
+        p.x++; // 2
+        p.y++; // 3
+        p.z++; // 4
     }
 
     public static void main(final String[] args) {

@@ -22,10 +22,7 @@ public class UseConstructorsEvolved {
          * printTrainInfo nella classe Train)
          */
 
-
-
-
-         //è analogo all'esercizio sui treni della settimana 1.
+        // è analogo all'esercizio sui treni della settimana 1.
     }
 
 }
