@@ -6,7 +6,6 @@ import it.unibo.inheritance.api.BankAccount;
 public abstract class AbstractBankAccount implements BankAccount {
 
     protected static final double ATM_TRANSACTION_FEE = 1;
-    protected static final double MANAGEMENT_FEE = 5;
 
     private AccountHolder holder;
     private double balance;
@@ -19,7 +18,6 @@ public abstract class AbstractBankAccount implements BankAccount {
     @Override
     public void chargeManagementFees(final int id) {
         if (this.checkUser(id)) {
-            this.balance -= MANAGEMENT_FEE;
             this.resetTransactions();
         }
     }
