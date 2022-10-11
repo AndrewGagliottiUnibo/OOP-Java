@@ -59,6 +59,6 @@ public class ClassicBankAccount extends AbstractBankAccount {
 
     @Override
     protected double computeFee() {
-        return super.getTransactionsCount() * MANAGEMENT_FEE;
+        return 0.0;
     }
 }
