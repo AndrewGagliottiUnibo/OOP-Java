@@ -62,7 +62,8 @@ public class TestBankAccount {
         final AccountHolder aRossi = new AccountHolder("Andrea", "Rossi", 1);
         final AccountHolder aBianchi = new AccountHolder("Alex", "Bianchi", 2);
         /*
-         * Change the two accounts to verify that the behaviour of restricted and simple bank account are preserved
+         * Change the two accounts to verify that the behaviour of restricted and simple
+         * bank account are preserved
          */
         final BankAccount restricted = null;
         final BankAccount extendedStrict = new ExtendedStrictBankAccount(aBianchi, 0);

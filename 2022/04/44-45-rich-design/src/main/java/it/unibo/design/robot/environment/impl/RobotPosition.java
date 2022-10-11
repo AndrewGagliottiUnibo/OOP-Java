@@ -12,9 +12,9 @@ public final class RobotPosition implements Position2D {
 
     /**
      * @param x
-     *            X position
+     *          X position
      * @param y
-     *            Y position
+     *          Y position
      */
     public RobotPosition(final int x, final int y) {
         this.x = x;
