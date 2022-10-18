@@ -1,6 +1,5 @@
 package it.unibo.collections.sets;
 
-import java.util.Collection;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeSet;
@@ -18,7 +17,7 @@ public final class UseSet {
 
     /**
      * @param args
-     *            ignored
+     *             ignored
      */
     public static void main(final String[] args) {
         /*
@@ -29,7 +28,8 @@ public final class UseSet {
          */
         final Set<String> set = new TreeSet<>();
         /*
-         * 2) Populates such Collection with all the Strings representing numbers ranging from "1" to
+         * 2) Populates such Collection with all the Strings representing numbers
+         * ranging from "1" to
          * "20" (both included)
          */
         for (int i = 0; i < ELEMS; i++) {
