@@ -17,7 +17,7 @@ public final class UseSetWithOrder {
 
     /**
      * @param s
-     *            ignored
+     *          ignored
      */
     public static void main(final String[] s) {
 
@@ -26,8 +26,10 @@ public final class UseSetWithOrder {
          * 
          * 1) Creates a new ORDERED TreeSet of Strings.
          * To order the set, define a new Comparator in a separate class.
-         * The comparator must convert the strings to double, then compare the doubles to find the biggest.
-         * The comparator does not need to deal with the case of Strings which are not parseable as doubles.
+         * The comparator must convert the strings to double, then compare the doubles
+         * to find the biggest.
+         * The comparator does not need to deal with the case of Strings which are not
+         * parseable as doubles.
          */
         Set<String> set = new TreeSet<>(new MyComparator());
         /*
