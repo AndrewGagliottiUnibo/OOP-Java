@@ -63,16 +63,16 @@ public final class ArithmeticService {
                 final var nextMultiplication = commandQueue.indexOf(TIMES);
                 final var nextDivision = commandQueue.indexOf(DIVIDED);
                 final var nextPriorityOp = nextMultiplication >= 0 && nextDivision >= 0
-                    ? min(nextMultiplication, nextDivision)
-                    : max(nextMultiplication, nextDivision);
+                        ? min(nextMultiplication, nextDivision)
+                        : max(nextMultiplication, nextDivision);
                 if (nextPriorityOp >= 0) {
                     computeAt(nextPriorityOp);
                 } else {
                     final var nextSum = commandQueue.indexOf(PLUS);
                     final var nextMinus = commandQueue.indexOf(MINUS);
                     final var nextOp = nextSum >= 0 && nextMinus >= 0
-                        ? min(nextSum, nextMinus)
-                        : max(nextSum, nextMinus);
+                            ? min(nextSum, nextMinus)
+                            : max(nextSum, nextMinus);
                     if (nextOp != -1) {
                         if (commandQueue.size() < 3) {
                             throw new IllegalStateException("Inconsistent operation: " + commandQueue);
@@ -112,13 +112,12 @@ public final class ArithmeticService {
         final var leftOperand = commandQueue.remove(operatorIndex - 1);
         if (KEYWORDS.contains(rightOperand) || KEYWORDS.contains(leftOperand)) {
             throw new IllegalStateException(
-                "Expected a number, but got " + leftOperand + " and " + rightOperand + " in " + commandQueue
-            );
+                    "Expected a number, but got " + leftOperand + " and " + rightOperand + " in " + commandQueue);
         }
         final var right = parseDouble(rightOperand);
         final var left = parseDouble(leftOperand);
         final var operand = commandQueue.get(operatorIndex - 1);
-        final var result =  switch (operand) {
+        final var result = switch (operand) {
             case PLUS -> left + right;
             case MINUS -> left - right;
             case TIMES -> left * right;

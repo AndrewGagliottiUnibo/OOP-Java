@@ -24,7 +24,7 @@ public final class ServiceBehindUnstableNetwork implements NetworkComponent {
 
     /**
      * @param failProbability the probability that a network communication fails
-     * @param randomSeed random generator seed for reproducibility
+     * @param randomSeed      random generator seed for reproducibility
      */
     public ServiceBehindUnstableNetwork(final double failProbability, final int randomSeed) {
         /*

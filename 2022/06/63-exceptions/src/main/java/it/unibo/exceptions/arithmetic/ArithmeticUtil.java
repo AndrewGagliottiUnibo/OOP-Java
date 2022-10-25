@@ -9,7 +9,8 @@ import static java.lang.Double.parseDouble;
  */
 public final class ArithmeticUtil {
 
-    private ArithmeticUtil() { }
+    private ArithmeticUtil() {
+    }
 
     /**
      * Checks whether a String can be parsed as a finite double.
