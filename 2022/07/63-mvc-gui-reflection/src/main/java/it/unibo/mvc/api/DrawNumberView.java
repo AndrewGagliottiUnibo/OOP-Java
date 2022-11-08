@@ -13,7 +13,8 @@ public interface DrawNumberView {
     void setController(DrawNumberController observer);
 
     /**
-     * This method is called before the UI is used. It should finalize its status (if needed).
+     * This method is called before the UI is used. It should finalize its status
+     * (if needed).
      */
     void start();
 
