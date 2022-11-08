@@ -1,11 +1,12 @@
 package it.unibo.mvc.model;
 
+
 /**
  * Encapsulates the concept of configuration.
  */
 public final class Configuration {
 
-    private final int max;
+    private final int max; 
     private final int min;
     private final int attempts;
 
@@ -55,22 +56,20 @@ public final class Configuration {
      * Pattern <i>builder</i> used here because:
      * <ul>
      * <li>
-     * all the parameters of the {@code Configuration} class have a default value,
-     * which
-     * means that we would like to have all the possible combinations of
-     * constructors (one with three parameters, three with two parameters, three
-     * with a single parameter), which are way too many and confusing to use
+     *     all the parameters of the {@code Configuration} class have a default value, which
+     *     means that we would like to have all the possible combinations of
+     *     constructors (one with three parameters, three with two parameters, three
+     *     with a single parameter), which are way too many and confusing to use
      * </li>
      * <li>
-     * moreover, it would be impossible to provide all of them, because they are
-     * all of the same type, and only a single constructor can exist with a given
-     * list of parameter types.
+     *      moreover, it would be impossible to provide all of them, because they are
+     *      all of the same type, and only a single constructor can exist with a given
+     *      list of parameter types.
      * </li>
      * <li>
-     * the {@code Configuration} class has three parameters of the same type, and it
-     * is
-     * unclear to understand, in a call to its contructor, which is which. By using
-     * the builder, we emulate the so-called "named arguments".
+     *     the {@code Configuration} class has three parameters of the same type, and it is
+     *     unclear to understand, in a call to its contructor, which is which. By using
+     *     the builder, we emulate the so-called "named arguments".
      * </li>
      * </ul>
      */

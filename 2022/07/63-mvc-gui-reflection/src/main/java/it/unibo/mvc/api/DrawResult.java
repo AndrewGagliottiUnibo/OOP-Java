@@ -3,8 +3,7 @@ package it.unibo.mvc.api;
 /**
  * Possible outcomes of a guess.
  * 
- * Here implemented as enum, but a configuration file would be MUCH more
- * effective.
+ * Here implemented as enum, but a configuration file would be MUCH more effective.
  */
 public enum DrawResult {
 
