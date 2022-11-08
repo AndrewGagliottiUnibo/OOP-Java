@@ -1,7 +1,12 @@
 {
 	"folders": [
 		{
-			"path": "2022/06"
+			"path": "2022/07"
 		}
-	]
+	],
+	"settings": {
+		"java.project.sourcePaths": [
+			""
+		]
+	}
 }
