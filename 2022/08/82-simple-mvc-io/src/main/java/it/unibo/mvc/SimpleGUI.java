@@ -60,7 +60,7 @@ public final class SimpleGUI {
      * Launches the application.
      *
      * @param a
-     *            unused
+     *          unused
      */
     public static void main(final String... a) {
         final SimpleGUI gui = new SimpleGUI(new Controller());

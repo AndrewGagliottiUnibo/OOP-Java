@@ -76,7 +76,7 @@ public class BadIOGUI {
             public void actionPerformed(final ActionEvent e) {
                 try {
                     final List<String> lines = Files.readAllLines(new File(PATH).toPath());
-                    for (final String line: lines) {
+                    for (final String line : lines) {
                         System.out.println(line); // NOPMD: allowed as this is just an exercise
                     }
                 } catch (IOException e1) {
@@ -119,6 +119,6 @@ public class BadIOGUI {
      * @param args ignored
      */
     public static void main(final String... args) {
-       new BadIOGUI().display();
+        new BadIOGUI().display();
     }
 }

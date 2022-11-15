@@ -37,9 +37,9 @@ public class Controller {
      * Saves some text on the designed file.
      * 
      * @param text
-     *            the text to save
+     *             the text to save
      * @throws IOException
-     *             if the writing fails
+     *                     if the writing fails
      */
     public void save(final String text) throws IOException {
         try (PrintStream out = new PrintStream(dest, StandardCharsets.UTF_8)) {
@@ -51,7 +51,7 @@ public class Controller {
      * Sets a new destination file.
      *
      * @param file
-     *            the file where to write
+     *             the file where to write
      */
     public void setDestination(final File file) {
         final File parent = file.getParentFile();
@@ -66,7 +66,7 @@ public class Controller {
      * Sets a new destination file.
      *
      * @param file
-     *            the file where to write
+     *             the file where to write
      */
     public void setDestination(final String file) {
         setDestination(new File(file));

@@ -16,7 +16,6 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-
 /**
  * A very simple program using a graphical interface.
  * 
@@ -58,15 +57,15 @@ public final class SimpleGUIWithFileChooser {
                 fc.setSelectedFile(ctrl.getCurrentFile());
                 final int result = fc.showSaveDialog(frame);
                 switch (result) {
-                case JFileChooser.APPROVE_OPTION:
-                    final File newDest = fc.getSelectedFile();
-                    ctrl.setDestination(newDest);
-                    filepath.setText(newDest.getPath());
-                    break;
-                case JFileChooser.CANCEL_OPTION:
-                    break;
-                default:
-                    JOptionPane.showMessageDialog(frame, result, "Meh!", JOptionPane.ERROR_MESSAGE);
+                    case JFileChooser.APPROVE_OPTION:
+                        final File newDest = fc.getSelectedFile();
+                        ctrl.setDestination(newDest);
+                        filepath.setText(newDest.getPath());
+                        break;
+                    case JFileChooser.CANCEL_OPTION:
+                        break;
+                    default:
+                        JOptionPane.showMessageDialog(frame, result, "Meh!", JOptionPane.ERROR_MESSAGE);
                 }
             }
         });
@@ -93,7 +92,7 @@ public final class SimpleGUIWithFileChooser {
      * Launches the application.
      *
      * @param a
-     *            unused
+     *          unused
      */
     public static void main(final String... a) {
         final SimpleGUIWithFileChooser gui = new SimpleGUIWithFileChooser(new Controller());
