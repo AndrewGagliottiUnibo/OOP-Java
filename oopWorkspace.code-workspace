@@ -1,12 +1,15 @@
 {
 	"folders": [
 		{
-			"path": "../../../Downloads/Daisy-n-Steve-master"
+			"path": "2022/09"
 		}
 	],
 	"settings": {
 		"java.project.sourcePaths": [
 			""
-		]
+		],
+		"files.associations": {
+			"vector": "cpp"
+		}
 	}
 }
