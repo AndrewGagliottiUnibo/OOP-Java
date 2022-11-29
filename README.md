@@ -5,3 +5,5 @@ There will be several branches:
 - Exercises (mine)
 - Code in lessons (code made by professor Mirko Viroli)
 - Personal Tests
+
+## License is valid for all branches.
