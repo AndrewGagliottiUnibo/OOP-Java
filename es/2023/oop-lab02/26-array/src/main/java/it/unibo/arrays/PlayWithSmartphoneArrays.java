@@ -3,15 +3,36 @@ package it.unibo.arrays;
 class PlayWithSmartphoneArrays {
 
     static int search(Smartphone[] array, String brand) {
-        return 0;
+        int count = 0;
+        for (Smartphone smartphone : array) {
+            if (smartphone.brand.equals(brand)) {
+                count++;
+            }
+        }
+
+        return count;
     }
 
     static int search(Smartphone[] array, boolean hasNFC, boolean hasGPS) {
-        return 0;
+        int count = 0;
+        for (Smartphone smartphone : array) {
+            if (smartphone.hasGPS == hasGPS && smartphone.hasNFC == hasNFC) {
+                count++;
+            }
+        }
+
+        return count;
     }
 
     static int search(Smartphone[] array, int nCPUs, int sdSize, boolean has3G) {
-        return 0;
+        int count = 0;
+        for (Smartphone smartphone : array) {
+            if (smartphone.nCPU == nCPUs && smartphone.sdSize == sdSize && smartphone.has3G == has3G) {
+                count++;
+            }
+        }
+
+        return count;
     }
 
     public static void main(String[] args) {
@@ -39,6 +60,6 @@ class PlayWithSmartphoneArrays {
         System.out.println("The number of HTC smartphones is: " + search(phones, "HTC"));
         System.out.println("The number of smartphones with NFC & GPS is: " + search(phones, true, true));
         System.out.println("The number of smartphones with 1 CPU 2048 MB sd and 3g is: "
-                + search(phones, 2, 8192, true));
+                + search(phones, 1, 2048, true));
     }
 }
