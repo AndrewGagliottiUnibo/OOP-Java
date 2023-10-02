@@ -15,27 +15,108 @@ class WorkWithArrays {
     }
 
     static int[] evenElements(final int[] array) {
-        return null;
+        int[] returnValue = new int[0];
+        for (int i = 0; i < array.length; i++) {
+            if (i % 2 == 0) {
+                returnValue = Arrays.copyOf(returnValue, returnValue.length + 1);
+                returnValue[returnValue.length - 1] = array[i];
+            }
+        }
+        return returnValue;
     }
 
     static int[] oddElements(final int[] array) {
-        return null;
+        int[] returnValue = new int[0];
+        for (int i = 0; i < array.length; i++) {
+            if (i % 2 != 0) {
+                returnValue = Arrays.copyOf(returnValue, returnValue.length + 1);
+                returnValue[returnValue.length - 1] = array[i];
+            }
+        }
+        return returnValue;
     }
 
     static int mostRecurringElement(final int[] array) {
-        return 0;
+        int maxOccurrencies = 0;
+        int mostRecurringElement = 0;
+
+        for (final int value : array) {
+            final int occurrencies = countOccurrencies(array, value);
+            if (occurrencies > maxOccurrencies) {
+                maxOccurrencies = occurrencies;
+                mostRecurringElement = value;
+            }
+        }
+        return mostRecurringElement;
     }
 
     static int[] sortArray(final int[] array, final boolean isDescending) {
+        
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = 0; j < array.length - 1 - i; j++) {
+                if(isDescending) {
+                    if (array[j] < array[j + 1]) {
+                        // Scambia arr[j] e arr[j + 1]
+                        int temp = array[j];
+                        array[j] = array[j + 1];
+                        array[j + 1] = temp;
+                    }
+                } else {
+                    if (array[j] > array[j + 1]) {
+                        // Scambia arr[j] e arr[j + 1]
+                        int temp = array[j];
+                        array[j] = array[j + 1];
+                        array[j + 1] = temp;
+                    }
+                }
+            }
+        }
+
         return array;
     }
 
     static double computeVariance(final int[] array) {
-        return 0;
+
+        // First compute the average of the elements in the array
+        double average = 0;
+        for (final int value : array) {
+            average += value;
+        }
+        average /= array.length;
+
+        // Then compute the variance
+        double variance = 0;
+        for (final int value : array) {
+            variance += Math.pow(value - average, 2);
+        }
+
+        return variance / array.length;
     }
 
     static int[] revertUpTo(final int[] array, final int element) {
-        return null;
+        
+        int index = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == element) {
+                index = i;
+                break;
+            }
+        }
+
+        if (index != -1) {
+            // Inverti gli elementi fino all'indice 'index' incluso
+            int start = 0;
+            int end = index;
+            while (start < end) {
+                int temp = array[start];
+                array[start] = array[end];
+                array[end] = temp;
+                start++;
+                end--;
+            }
+        }
+        
+        return array;
     }
 
     static int[] duplicateElements(final int[] array, final int times) {
@@ -55,7 +136,9 @@ class WorkWithArrays {
         return countOccurrencies(new int[] { 1, 2, 3, 4 }, 1) == 1
             && countOccurrencies(new int[] { 0, 2, 3, 4 }, 1) == 0
             && countOccurrencies(new int[] { 7, 4, 1, 9, 3, 1, 5 }, 2) == 0
-            && countOccurrencies(new int[] { 1, 2, 1, 3, 4, 1 }, 1) == 3;
+            && countOccurrencies(new int[] { 1, 2, 1, 3, 4, 1 }, 1) == 3
+            && countOccurrencies(new int[] { 1, 2, 1, 3, 4, 1, 4, 6, 7, 8, 10, 12, 4 }, 4) == 3;
+
     }
 
     /* Utility method for testing evenElems method */
