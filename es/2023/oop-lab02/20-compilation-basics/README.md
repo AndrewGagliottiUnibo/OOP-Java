@@ -25,3 +25,5 @@
     - In Unix, `/`
     - In Windows, `C:\` (o altra lettera di unità se il file non è stato scompattato in `C:`
 4. Senza cambiare la posizione del terminale, si esegua nuovamente `Calculator`
+
+# java -cp bin Calculator
