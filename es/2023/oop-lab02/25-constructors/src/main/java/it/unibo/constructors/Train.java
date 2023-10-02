@@ -12,15 +12,6 @@ class Train {
     int firstClassReserved;
     int secondClassReserved;
 
-    // Default constructor
-    public Train() {
-        this.seats = DEFAULT_TOT_SEATS;
-        this.firstClassSeats = DEFAULT_N_FC_SEATS;
-        this.secondClassSeats = DEFAULT_N_SC_SEATS;
-        this.firstClassReserved = 0;
-        this.secondClassReserved = 0;
-    }
-
     // Basic constructor
     public Train(final int totalSeat, final int firstClassSeats, final int secondClassSeats) {
         this.seats = totalSeat;
@@ -28,6 +19,16 @@ class Train {
         this.secondClassSeats = secondClassSeats;
         this.firstClassReserved = 0;
         this.secondClassReserved = 0;
+    }
+
+    // Sum Constructor
+    public Train(final int firstClassSeats, final int secondClassSeats) {
+        this(firstClassSeats + secondClassSeats, firstClassSeats, secondClassSeats);
+    }
+
+    // Default constructor
+    public Train() {
+        this(DEFAULT_TOT_SEATS, DEFAULT_N_FC_SEATS, DEFAULT_N_SC_SEATS);
     }
 
     void deleteAllReservations() {
@@ -59,6 +60,15 @@ class Train {
         return this.seats;
     }
 
+    
+    void reserveFirstClassSeats(final int nSeats) {
+        this.firstClassReserved += nSeats;
+    }
+    
+    void reserveSecondClassSeats(final int nSeats) {
+        this.secondClassReserved += nSeats;
+    }
+    
     void printTrainInfo() {
         System.out.println("Train info:");
         System.out.println("-nTotSeats: " + this.seats);
@@ -66,13 +76,5 @@ class Train {
         System.out.println("-nSCSeats: " + this.secondClassSeats);
         System.out.println("-nFCReservedSeats: " + this.firstClassReserved);
         System.out.println("-nSCReservedSeats: " + this.secondClassReserved + "\n");
-    }
-
-    void reserveFirstClassSeats(final int nSeats) {
-        this.firstClassReserved += nSeats;
-    }
-
-    void reserveSecondClassSeats(final int nSeats) {
-        this.secondClassReserved += nSeats;
     }
 }

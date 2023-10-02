@@ -7,10 +7,10 @@ class Student {
     int id;
     int matriculationYear;
 
-    public Student(final String name, final String surname, final int id, final int matriculationYear) {
+    public Student(final int id, final String name, final String surname, final int matriculationYear) {
+        this.id = id;
         this.name = name;
         this.surname = surname;
-        this.id = id;
         this.matriculationYear = matriculationYear;
     }
 
