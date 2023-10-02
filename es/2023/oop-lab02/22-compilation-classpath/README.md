@@ -20,4 +20,4 @@
 # Va bene anche la variante con le virgolette per il classpath
 #
 # javac -cp 21-compilation-with-packages/bin/ -d 22-compilation-classpath/bin/ 22-compilation-classpath/src/compilation/lab/math/UseComplex.java
-# java -cp 22-compilation-classpath/bin/ compilation.lab.math.UseComplex
+# java -cp "22-compilation-classpath/bin/;21-compilation-with-packages/bin" compilation.lab.math.UseComplex
