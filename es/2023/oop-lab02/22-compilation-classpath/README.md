@@ -16,3 +16,8 @@
 5. Si esegua la classe `oop.lab02.math.UseComplex` usando opportunamente più percorsi nel classpath, a tal proposito si ricorda che:
     - Il separatore di percorsi è `:` su Linux e `;` su Windows
     - Il comando `java -cp bin:../01-packages/bin NOMEDELLACLASSE` (formato Unix, usare `;` come separatore in Windows) istruisce l'interprete Java dicendogli di andare a caricare classi non solo dalla posizione corrente, ma anche dalla cartella `bin`, e dalla cartella `../01-packages/bin`
+
+# Va bene anche la variante con le virgolette per il classpath
+#
+# javac -cp 21-compilation-with-packages/bin/ -d 22-compilation-classpath/bin/ 22-compilation-classpath/src/compilation/lab/math/UseComplex.java
+# java -cp 22-compilation-classpath/bin/ compilation.lab.math.UseComplex
