@@ -12,4 +12,9 @@ java -cp "bin\;home/pippo/*/pluto/paperino\;" NomeClasse
 
 # Passare a java dei percorsi con file .class ma con nome simbolico del package
 java -cp "bin\;home/pippo/*/pluto/paperino\;$HOME/percorso1/percorso2/bin/" nome.package.NomeClasse
+java -cp 22-compilation-classpath/bin/ compilation.lab.math.UseComplex
+
+# Passare un classpath a javac
+javac -cp 21-compilation-with-packages/bin/ -d 22-compilation-classpath/bin/ 22-compilation-classpath/src/compilation/lab/math/UseComplex.java
+
 
