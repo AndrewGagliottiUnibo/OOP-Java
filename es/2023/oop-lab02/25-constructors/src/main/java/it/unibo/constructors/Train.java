@@ -60,7 +60,6 @@ class Train {
         return this.seats;
     }
 
-    
     void reserveFirstClassSeats(final int nSeats) {
         this.firstClassReserved += nSeats;
     }
