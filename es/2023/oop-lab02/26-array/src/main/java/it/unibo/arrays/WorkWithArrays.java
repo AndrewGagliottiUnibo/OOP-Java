@@ -95,7 +95,7 @@ class WorkWithArrays {
 
     static int[] revertUpTo(final int[] array, final int element) {
         
-        int index = 0;
+        int index = array.length;
         for (int i = 0; i < array.length; i++) {
             if (array[i] == element) {
                 index = i;
@@ -103,8 +103,7 @@ class WorkWithArrays {
             }
         }
 
-        if (index != -1) {
-            // Inverti gli elementi fino all'indice 'index' incluso
+        if (index != array.length) {
             int start = 0;
             int end = index;
             while (start < end) {
