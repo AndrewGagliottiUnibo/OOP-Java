@@ -29,6 +29,7 @@ public class Professor implements User {
         this.courses = courses;
     }
 
+    // Getters
     @Override
     public String getUsername() {
         return this.name + Professor.DOT + this.surname;

@@ -8,12 +8,12 @@ public class Exam {
     private int nMaxStudents;
     private int registeredStudents;
     private String courseName;
-    private User professor;
+    private Professor professor;
     ExamRoom room;
     Student[] students;
 
     public Exam(final int id, final int nMaxStudents, final String courseName, 
-                final User professor, final ExamRoom room) {
+                final Professor professor, final ExamRoom room) {
         this.id = id;
         this.nMaxStudents = nMaxStudents;
         this.registeredStudents = 0;
@@ -33,6 +33,7 @@ public class Exam {
         }
     }
 
+    // Getters
     public int getId() {
         return this.id;
     }
@@ -65,7 +66,7 @@ public class Exam {
     public String toString() {
 
         return "Exam [courseName = " + this.getCourseName() + ", id = " + this.getId() + ", nMaxStudents = " + this.getMaxStudents()
-                + ", \nprofessor = " + this.getProfessor() + ", \nregisteredStudents = " + this.getNumberOfStudents() + ", \nroom = " + room.toString()
-                + ", \nstudents = " + Arrays.toString(this.getRegisteredStudents()) + "]\n";
+                + ", \n" + this.getProfessor() + ", \nregisteredStudents = " + this.getNumberOfStudents() + ", \n" + room.toString()
+                + ", \n" + Arrays.toString(this.getRegisteredStudents()) + "]\n";
     }
 }

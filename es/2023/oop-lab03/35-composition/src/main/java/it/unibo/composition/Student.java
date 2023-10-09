@@ -23,6 +23,7 @@ public class Student implements User {
         this.password = password;
     }
 
+    // Getters
     public String getName() {
         return this.name;
     }
@@ -39,15 +40,6 @@ public class Student implements User {
         return this.matriculationYear;
     }
 
-    public String toString() {
-        return "Student ["
-            + "name=" + this.name
-            + ", surname=" + this.surname
-            + ", id=" + this.id
-            + ", matriculationYear=" + this.matriculationYear
-            + "]";
-    }
-
     public String getUsername() {
         return this.name + Student.DOT + this.surname;
     }
@@ -58,5 +50,14 @@ public class Student implements User {
 
     public String getDescription() {
         return this.toString();
+    }
+
+    public String toString() {
+        return "Student ["
+            + "name=" + this.name
+            + ", surname=" + this.surname
+            + ", id=" + this.id
+            + ", matriculationYear=" + this.matriculationYear
+            + "]";
     }
 }
