@@ -18,7 +18,7 @@ public class StrictBankAccount implements BankAccount {
     @Override
     public void withdraw(int id, double amount) {
         if (this.id == id && this.balance >= amount) {
-            this.balance -= amount;
+            this.adjustBalance(-amount);
             this.transactions++;
         }
     }
@@ -26,7 +26,7 @@ public class StrictBankAccount implements BankAccount {
     @Override
     public void deposit(int id, double amount) {
         if (this.id == id) {
-            this.balance += amount;
+            this.adjustBalance(amount);
             this.transactions++;
         }
     }
@@ -34,7 +34,7 @@ public class StrictBankAccount implements BankAccount {
     @Override
     public void depositFromATM(int id, double amount) {
         if (this.id == id) {
-            this.balance += amount - ATM_TRANSACTION_FEE;
+            this.adjustBalance(amount - ATM_TRANSACTION_FEE);
             this.transactions++;
         }
     }
@@ -42,7 +42,7 @@ public class StrictBankAccount implements BankAccount {
     @Override
     public void withdrawFromATM(int id, double amount) {
        if (this.id == id && this.balance >= amount + ATM_TRANSACTION_FEE) {
-            this.balance -= amount + ATM_TRANSACTION_FEE;
+        this.adjustBalance(-amount - ATM_TRANSACTION_FEE);
             this.transactions++;
         }
     }
@@ -52,6 +52,10 @@ public class StrictBankAccount implements BankAccount {
         if (this.id == id) {
             this.balance -= MANAGEMENT_FEE + this.transactions * 0.1;
         }
+    }
+
+    private void adjustBalance(final double balance) {
+        this.balance += balance;
     }
 
     public int getid() {

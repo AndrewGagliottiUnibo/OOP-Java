@@ -52,7 +52,7 @@ public class SimpleBankAccount implements BankAccount {
          * corrisponde
          */
         if(this.id == id) {
-            this.balance += amount;
+            this.adjustBalance(amount);
             this.transactions++;
         }
     }
@@ -64,7 +64,7 @@ public class SimpleBankAccount implements BankAccount {
          * Il prelievo va a buon fine solo se l'id utente corrisponde
          */
         if(this.id == id) {
-            this.balance -= amount;
+            this.adjustBalance(-amount);
             this.transactions++;
         }
     }
@@ -77,7 +77,7 @@ public class SimpleBankAccount implements BankAccount {
          * l'id utente corrisponde
          */
         if(this.id == id) {
-            this.balance += amount - ATM_TRANSACTION_FEE;
+            this.adjustBalance(amount - ATM_TRANSACTION_FEE);
             this.transactions++;
         }
 
@@ -92,14 +92,17 @@ public class SimpleBankAccount implements BankAccount {
          * corrisponde
          */
         if(this.id == id) {
-            this.balance -= amount + ATM_TRANSACTION_FEE;
+            this.adjustBalance(-amount - ATM_TRANSACTION_FEE);
             this.transactions++;
         }
     }
 
+    private void adjustBalance(final double balance) {
+        this.balance += balance;
+    }
+
     public void chargeManagementFees(final int id) {
         //throw new UnsupportedOperationException("Unimplemented method 'getTransactionsCount'" + MANAGEMENT_FEE);
-
     }
 
     @Override
