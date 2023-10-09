@@ -50,7 +50,7 @@ public class Professor implements User {
             + ", surname=" + this.surname
             + ", id=" + this.id
             + ", courses=" + Arrays.toString(this.courses)
-            + "]\n";
+            + "]";
     }
     
 }

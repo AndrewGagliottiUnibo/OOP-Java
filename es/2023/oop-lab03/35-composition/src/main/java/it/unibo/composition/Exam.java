@@ -64,8 +64,8 @@ public class Exam {
     @Override
     public String toString() {
 
-        return "Exam [courseName=" + this.getCourseName() + ", id=" + this.getId() + ", nMaxStudents=" + this.getMaxStudents()
-                + "\n, professor=" + this.getProfessor() + ", registeredStudents=" + this.getNumberOfStudents() + "\n, room=\n" + room.toString()
-                + "\n, students=" + Arrays.toString(this.getRegisteredStudents()) + "]\n";
+        return "Exam [courseName = " + this.getCourseName() + ", id = " + this.getId() + ", nMaxStudents = " + this.getMaxStudents()
+                + ", \nprofessor = " + this.getProfessor() + ", \nregisteredStudents = " + this.getNumberOfStudents() + ", \nroom = " + room.toString()
+                + ", \nstudents = " + Arrays.toString(this.getRegisteredStudents()) + "]\n";
     }
 }
