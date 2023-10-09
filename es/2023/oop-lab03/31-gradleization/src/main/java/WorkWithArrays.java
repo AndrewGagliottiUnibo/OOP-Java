@@ -1,4 +1,4 @@
-package it.unibo.arrays;
+package main.java;
 
 import java.util.Arrays;
 
