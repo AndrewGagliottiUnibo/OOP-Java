@@ -25,9 +25,8 @@ public class Exam {
 
     public void registerStudent(Student student) {
         if(this.registeredStudents < this.nMaxStudents) {
-            this.students = Arrays.copyOf(students, students.length + 1);
-            this.registeredStudents += 1;
-            this.students[registeredStudents - 1] = student;
+            this.students[registeredStudents] = student;
+            this.registeredStudents++;
         }
         else {
             System.out.println("Aula piena");
@@ -59,7 +58,7 @@ public class Exam {
     }
 
     public Student[] getRegisteredStudents() {
-        return Arrays.copyOf(students, students.length);
+        return Arrays.copyOf(students, this.getNumberOfStudents());
     }
 
     @Override
