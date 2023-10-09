@@ -1,5 +1,7 @@
 package it.unibo.composition;
 
+import java.util.Arrays;
+
 public class Professor implements User {
 
     private static final String DOT = ".";
@@ -47,7 +49,7 @@ public class Professor implements User {
             + "name=" + this.name
             + ", surname=" + this.surname
             + ", id=" + this.id
-            + ", courses=" + this.courses
+            + ", courses=" + Arrays.toString(this.courses)
             + "]\n";
     }
     

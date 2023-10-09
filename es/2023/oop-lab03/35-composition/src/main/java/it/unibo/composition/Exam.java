@@ -24,20 +24,49 @@ public class Exam {
     }
 
     public void registerStudent(Student student) {
-        if (registeredStudents < nMaxStudents) {
-            registeredStudents++;
-            students[registeredStudents - 1] = student;
+        if(this.registeredStudents < this.nMaxStudents) {
+            this.students = Arrays.copyOf(students, students.length + 1);
+            this.registeredStudents += 1;
+            this.students[registeredStudents - 1] = student;
+        }
+        else {
+            System.out.println("Aula piena");
         }
     }
 
-    public void getRegisteredStudents() {
-       Arrays.toString(students); 
+    public int getId() {
+        return this.id;
+    }
+
+    public int getMaxStudents() {
+        return this.nMaxStudents;
+    }
+
+    public String getCourseName() {
+        return this.courseName;
+    }
+
+    public String getProfessor() {
+        return this.professor.toString();
+    }
+
+    public ExamRoom getRoom() {
+        return this.room;
+    }
+
+    public int getNumberOfStudents() {
+        return this.registeredStudents;
+    }
+
+    public Student[] getRegisteredStudents() {
+        return Arrays.copyOf(students, students.length);
     }
 
     @Override
     public String toString() {
-        return "Exam [courseName=" + courseName + ", id=" + id + ", nMaxStudents=" + nMaxStudents
-                + ", professor=" + professor.getUsername() + ", registeredStudents=" + registeredStudents + ", room=" + room
-                + ", students=" + Arrays.toString(students) + "]\n";
+
+        return "Exam [courseName=" + this.getCourseName() + ", id=" + this.getId() + ", nMaxStudents=" + this.getMaxStudents()
+                + "\n, professor=" + this.getProfessor() + ", registeredStudents=" + this.getNumberOfStudents() + "\n, room=\n" + room.toString()
+                + "\n, students=" + Arrays.toString(this.getRegisteredStudents()) + "]\n";
     }
 }
