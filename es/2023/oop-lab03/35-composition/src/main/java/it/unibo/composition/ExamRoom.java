@@ -19,19 +19,19 @@ public class ExamRoom {
     }
 
     public int getSeatsCount() {
-        return seatsCount;
+        return this.seatsCount;
     }
 
     public String getDescription() {
-        return desc;
+        return this.desc;
     }
 
     public boolean isProjectorAvailable() {
-        return projectorAvailable;
+        return this.projectorAvailable;
     }
 
     public boolean isNetworkAvailable() {
-        return networkAvailable;
+        return this.networkAvailable;
     }
 
     public String toString() {
@@ -40,6 +40,6 @@ public class ExamRoom {
             + ", description=" + this.desc
             + ", isProjectorAvailable=" + this.projectorAvailable
             + ", isNetworkAvailable=" + this.networkAvailable
-            + "]";
+            + "]\n";
     }
 }

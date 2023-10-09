@@ -45,7 +45,7 @@ public class Student implements User {
             + ", surname=" + this.surname
             + ", id=" + this.id
             + ", matriculationYear=" + this.matriculationYear
-            + "]";
+            + "]\n";
     }
 
     public String getUsername() {
