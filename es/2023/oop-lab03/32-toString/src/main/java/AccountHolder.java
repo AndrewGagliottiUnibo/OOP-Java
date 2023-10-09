@@ -1,5 +1,3 @@
-package it.unibo.tostring;
-
 public class AccountHolder {
 
     private final String name;
@@ -25,8 +23,7 @@ public class AccountHolder {
     }
 
     public String toString() {
-        // Should print name, surname, and account id.
-        return null;
+        return "[AccountHolder: " + this.name + " " + this.surname + " " + this.userID + "]";
     }
 
     public static void main(final String[] args) {
