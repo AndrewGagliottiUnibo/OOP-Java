@@ -43,6 +43,6 @@ public class Circle implements Shape {
     public String toString() {
         return "This is a circle with radius = " + this.getRadius() + "cm " +
                 "and area = " + this.computeArea() + "cm^2 " +
-                "and perimeter = " + this.computePerimeter() + "cm";
+                "and perimeter = " + this.computePerimeter() + "cm\n";
     }  
 }

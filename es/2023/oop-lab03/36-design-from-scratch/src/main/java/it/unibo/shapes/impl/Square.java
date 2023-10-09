@@ -47,6 +47,6 @@ public class Square implements Polygon {
     public String toString() {
         return "This is a square with side = " + this.getSide() + "cm " +
                 "and area = " + this.computeArea() + "cm^2 " +
-                "and perimeter = " + this.computePerimeter() + "cm";
+                "and perimeter = " + this.computePerimeter() + "cm\n";
     }
 }

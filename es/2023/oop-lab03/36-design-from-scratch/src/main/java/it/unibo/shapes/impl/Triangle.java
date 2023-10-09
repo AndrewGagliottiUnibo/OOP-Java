@@ -71,6 +71,6 @@ public class Triangle implements Polygon {
                 "and side2 = " + this.getSide2() + "cm " +
                 "and side3 = " + this.getSide3() + "cm " +
                 "and area = " + this.computeArea() + "cm^2 " +
-                "and perimeter = " + this.computePerimeter() + "cm";
+                "and perimeter = " + this.computePerimeter() + "cm\n";
     }
 }

@@ -58,6 +58,6 @@ public class Rectangle implements Polygon {
         return "This is a rectangle with base = " + this.getBase() + "cm " +
                 "and height = " + this.getHeight() + "cm " +
                 "and area = " + this.computeArea() + "cm^2 " +
-                "and perimeter = " + this.computePerimeter() + "cm";
+                "and perimeter = " + this.computePerimeter() + "cm\n";
     }
 }
