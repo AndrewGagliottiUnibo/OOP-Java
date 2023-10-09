@@ -11,7 +11,7 @@ public class SimpleBankAccount implements BankAccount {
      */
 
     private static final double ATM_TRANSACTION_FEE = 1;
-    private static final double MANAGEMENT_FEE = 5;
+    //private static final double MANAGEMENT_FEE = 5;
 
     private final int id;
     private double balance;
