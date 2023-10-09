@@ -1,1 +1,1 @@
-rootProject.name = "gradleized-project
+rootProject.name = "gradleized-project"
