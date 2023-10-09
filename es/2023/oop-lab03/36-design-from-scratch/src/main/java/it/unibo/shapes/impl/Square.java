@@ -4,28 +4,49 @@ import it.unibo.shapes.api.Polygon;
 
 public class Square implements Polygon {
 
+    private static final int NUM_EDGES = 4;
+    private double side;
+
+    // Constructor
+    public Square(final double side) {
+        this.side = side;
+    }
+
+    // Polygon interface methods
     @Override
     public double computeArea() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'computeArea'");
+        return Math.pow(this.side, 2);
     }
 
     @Override
     public double computePerimeter() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'computePerimeter'");
+        return this.side * NUM_EDGES;
     }
 
     @Override
     public String getDescription() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getDescription'");
+        return this.toString();
     }
 
     @Override
     public int getEdgeCount() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getEdgeCount'");
+        return NUM_EDGES;
+    }
+
+    // Getters and setters
+    public double getSide() {
+        return this.side;
+    }
+
+    public void setSide(final double side) {
+        this.side = side;
     }
     
+    // toString()
+    @Override
+    public String toString() {
+        return "This is a square with side = " + this.getSide() + "cm " +
+                "and area = " + this.computeArea() + "cm^2 " +
+                "and perimeter = " + this.computePerimeter() + "cm";
+    }
 }
