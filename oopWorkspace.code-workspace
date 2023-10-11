@@ -1,15 +1,12 @@
 {
-	"folders": [
-		{
-			"path": "2022/09"
-		}
-	],
+	"folders": [],
 	"settings": {
 		"java.project.sourcePaths": [
-			""
+			"src"
 		],
-		"files.associations": {
-			"vector": "cpp"
-		}
+		"java.project.outputPath": "bin",
+		"java.project.referencedLibraries": [
+			"lib/**/*.jar"
+		]
 	}
 }
