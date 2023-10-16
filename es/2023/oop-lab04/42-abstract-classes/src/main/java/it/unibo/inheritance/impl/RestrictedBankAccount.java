@@ -3,11 +3,14 @@ package it.unibo.inheritance.impl;
 import it.unibo.inheritance.api.AbstractBankAccount;
 import it.unibo.inheritance.api.AccountHolder;
 
-public class ClassicBankAccount extends AbstractBankAccount {
+public class RestrictedBankAccount extends AbstractBankAccount {
+
+    private static final double TRANSACTION_FEE = 0.1;
 
     // Constructor
-    public ClassicBankAccount(final AccountHolder accountHolder, final double balance) {
+    public RestrictedBankAccount(final AccountHolder accountHolder, final double balance) {
         super(accountHolder, balance);
+        //TODO Auto-generated constructor stub
     }
 
     @Override
@@ -17,6 +20,7 @@ public class ClassicBankAccount extends AbstractBankAccount {
 
     @Override
     protected double computeFee() {
-        return AbstractBankAccount.MANAGEMENT_FEE;
-    }  
+        return AbstractBankAccount.MANAGEMENT_FEE + (this.getTransactionsCount() * TRANSACTION_FEE);
+    }
+    
 }
