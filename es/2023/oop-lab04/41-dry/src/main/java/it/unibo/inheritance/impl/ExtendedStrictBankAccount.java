@@ -17,22 +17,10 @@ public class ExtendedStrictBankAccount extends SimpleBankAccount{
         }
     }
 
-    public void deposit(final int id, final double amount) {
-        this.transactionOp(id, amount);
-    }
-
     public void withdraw(final int id, final double amount) {
         if (this.isWithdrawAllowed(amount)) {
             this.transactionOp(id, -amount);
         }
-    }
-
-    public void depositFromATM(final int id, final double amount) {
-        this.deposit(id, amount - ATM_TRANSACTION_FEE);
-    }
-
-    public void withdrawFromATM(final int id, final double amount) {
-        this.withdraw(id, amount + ATM_TRANSACTION_FEE);
     }
 
     public void chargeManagementFees(final int id) {
