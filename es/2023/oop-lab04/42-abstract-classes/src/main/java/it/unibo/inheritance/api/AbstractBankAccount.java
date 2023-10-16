@@ -9,6 +9,7 @@ public abstract class AbstractBankAccount implements BankAccount {
     private double balance;
     private int transactions;
 
+    // Constructor
     public AbstractBankAccount(final AccountHolder accountHolder, final double balance) {
         this.holder = accountHolder;
         this.balance = balance;
@@ -16,9 +17,16 @@ public abstract class AbstractBankAccount implements BankAccount {
     }
 
     @Override
+    public void chargeManagementFees(int id) {
+        if (this.checkUser(id)) {
+            this.balance -= this.computeFee();
+            this.resetTransactions();
+        }
+    }
+
+    @Override
     public void deposit(final int id, final double amount) {
-        this.balance += amount;
-        this.transactions++; 
+        this.transactionOp(id, amount);
     }
 
     @Override
@@ -43,14 +51,33 @@ public abstract class AbstractBankAccount implements BankAccount {
 
     @Override
     public void withdraw(final int id, final double amount) {
-        this.balance -= amount;
-        this.transactions++;
+        this.transactionOp(id, -amount);
     }
 
     @Override
     public void withdrawFromATM(final int id, final double amount) {
         this.withdraw(id, amount + ATM_TRANSACTION_FEE);
     } 
+
+    // Private methods used for checking and updating the balance
+    private boolean checkUser(final int id) {
+        return this.getAccountHolder().getUserID() == id;
+    }
+
+    private void incrementTransactions() {
+        this.transactions++;
+    }
+
+    private void resetTransactions() {
+        this.transactions = 0;
+    }
+
+    private void transactionOp(final int id, final double amount) {
+        if (this.checkUser(id)) {
+            this.balance += amount;
+            this.incrementTransactions();
+        }
+    }
 
     // New methods
     protected abstract boolean isWithDrawAllowed(final double value);

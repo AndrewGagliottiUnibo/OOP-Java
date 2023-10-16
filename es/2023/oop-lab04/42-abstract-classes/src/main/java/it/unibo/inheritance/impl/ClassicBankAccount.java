@@ -12,12 +12,6 @@ public class ClassicBankAccount extends AbstractBankAccount {
     }
 
     @Override
-    public void chargeManagementFees(int id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'chargeManagementFees'");
-    }
-
-    @Override
     protected boolean isWithDrawAllowed(double value) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'isWithDrawAllowed'");
