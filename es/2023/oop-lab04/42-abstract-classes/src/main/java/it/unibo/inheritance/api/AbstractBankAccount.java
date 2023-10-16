@@ -16,13 +16,13 @@ public abstract class AbstractBankAccount implements BankAccount {
     }
 
     @Override
-    public void deposit(int id, double amount) {
+    public void deposit(final int id, final double amount) {
         this.balance += amount;
         this.transactions++; 
     }
 
     @Override
-    public void depositFromATM(int id, double amount) {
+    public void depositFromATM(final int id, final double amount) {
        this.deposit(id, amount - ATM_TRANSACTION_FEE);
     }
 
@@ -42,13 +42,18 @@ public abstract class AbstractBankAccount implements BankAccount {
     }
 
     @Override
-    public void withdraw(int id, double amount) {
+    public void withdraw(final int id, final double amount) {
         this.balance -= amount;
         this.transactions++;
     }
 
     @Override
-    public void withdrawFromATM(int id, double amount) {
+    public void withdrawFromATM(final int id, final double amount) {
         this.withdraw(id, amount + ATM_TRANSACTION_FEE);
     } 
+
+    // New methods
+    protected abstract boolean isWithDrawAllowed(final double value);
+
+    protected abstract double computeFee();
 }
