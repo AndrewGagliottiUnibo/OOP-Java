@@ -27,5 +27,4 @@ public class ExtendedStrictBankAccount extends SimpleBankAccount {
     protected boolean isWithdrawAllowed(final double amount) {
         return getBalance() > amount;
     }
-
 }

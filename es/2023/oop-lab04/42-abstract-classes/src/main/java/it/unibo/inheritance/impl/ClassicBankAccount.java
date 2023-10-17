@@ -12,7 +12,7 @@ public class ClassicBankAccount extends AbstractBankAccount {
 
     @Override
     protected boolean isWithDrawAllowed(final double value) {
-        return super.getBalance() >= value;
+                return true;
     }
 
     @Override

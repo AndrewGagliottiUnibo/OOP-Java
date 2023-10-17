@@ -10,7 +10,6 @@ public class RestrictedBankAccount extends AbstractBankAccount {
     // Constructor
     public RestrictedBankAccount(final AccountHolder accountHolder, final double balance) {
         super(accountHolder, balance);
-        //TODO Auto-generated constructor stub
     }
 
     @Override
@@ -22,5 +21,4 @@ public class RestrictedBankAccount extends AbstractBankAccount {
     protected double computeFee() {
         return AbstractBankAccount.MANAGEMENT_FEE + (this.getTransactionsCount() * TRANSACTION_FEE);
     }
-    
 }

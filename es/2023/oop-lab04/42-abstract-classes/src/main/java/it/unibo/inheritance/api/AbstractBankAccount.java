@@ -17,9 +17,10 @@ public abstract class AbstractBankAccount implements BankAccount {
     }
 
     @Override
-    public void chargeManagementFees(int id) {
-        if (this.checkUser(id)) {
-            this.balance -= this.computeFee();
+    public void chargeManagementFees(final int id) {
+        var fees = this.computeFee();
+        if (this.checkUser(id) && this.isWithDrawAllowed(fees)) {
+            this.balance -= fees;
             this.resetTransactions();
         }
     }
@@ -51,7 +52,9 @@ public abstract class AbstractBankAccount implements BankAccount {
 
     @Override
     public void withdraw(final int id, final double amount) {
-        this.transactionOp(id, -amount);
+        if (this.checkUser(id) && this.isWithDrawAllowed(amount)) {
+            this.transactionOp(id, -amount);
+        }
     }
 
     @Override
