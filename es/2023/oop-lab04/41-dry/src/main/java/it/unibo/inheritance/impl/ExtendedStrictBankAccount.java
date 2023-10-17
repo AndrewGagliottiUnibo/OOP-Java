@@ -5,21 +5,14 @@ public class ExtendedStrictBankAccount extends SimpleBankAccount{
     private static final double TRANSACTION_FEE = 0.1;
 
     // Constructor
-    public ExtendedStrictBankAccount(int id, double balance) {
+    public ExtendedStrictBankAccount(final int id, final double balance) {
         super(id, balance);
     }
     
     // Methods
-    private void transactionOp(final int id, final double amount) {
-        if (this.checkUser(id)) {
-            this.setBalance(this.getBalance() + amount);
-            this.incrementTransactions();
-        }
-    }
-
     public void withdraw(final int id, final double amount) {
         if (this.isWithdrawAllowed(amount)) {
-            this.transactionOp(id, -amount);
+            super.withdraw(id, amount);
         }
     }
 
