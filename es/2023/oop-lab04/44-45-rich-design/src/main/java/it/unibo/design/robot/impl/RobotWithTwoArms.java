@@ -59,22 +59,22 @@ public class RobotWithTwoArms extends BaseRobot implements RobotWithArms {
 
     private void pickItem(final BasicArm arm) {
         if (this.isBatteryEnough(arm.getConsuptionForPickUp()) && !arm.isGrabbed()) {
-            this.log(arm + " is picking an object");
+            this.log(arm.toString() + " is picking an object");
             arm.pickUp();
             this.consumeBattery(arm.getConsuptionForPickUp());
         } else {
-            this.log("Can not grab (battery=" + this.getBatteryLevel() + "," + arm + " isGrabbing=" + arm.isGrabbed() + ")");
+            this.log("Battery Error: " + this.getBatteryLevel() + "," + arm.toString() + " Grabbing? " + arm.isGrabbed());
         }
     }
 
     private void leaveItem(final BasicArm arm) {
         if (this.isBatteryEnough(arm.getConsuptionForDropDown()) && arm.isGrabbed()) {
-            this.log(arm + " is releasing an object");
+            this.log(arm.toString() + " is leaving an object");
             arm.dropDown();
             this.consumeBattery(arm.getConsuptionForDropDown());
         } else {
-            log("Can not release (batteryLevel=" + this.getBatteryLevel() + "," + arm + " isGrabbing="
-                    + arm.isGrabbed() + ")");
+            log("Battery Error: " + this.getBatteryLevel() + "," + arm.toString() + " Grabbing? "
+                    + arm.isGrabbed());
         }
     }
 }
