@@ -1,4 +1,4 @@
-package main.java.it.unibo.collections.comparators;
+package it.unibo.collections.comparators;
 
 import java.util.Comparator;
 
