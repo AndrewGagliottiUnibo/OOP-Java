@@ -17,4 +17,11 @@ java -cp 22-compilation-classpath/bin/ compilation.lab.math.UseComplex
 # Passare un classpath a javac
 javac -cp 21-compilation-with-packages/bin/ -d 22-compilation-classpath/bin/ 22-compilation-classpath/src/compilation/lab/math/UseComplex.java
 
+# gradle compiling
+./gradlew compileJava
 
+# gradle cleaning
+./gradlew clean
+
+# Runnare una classe dopo compilazione via gradle
+java -cp build/classes/java/main/ it.unibo.collections.sets.UseSet
