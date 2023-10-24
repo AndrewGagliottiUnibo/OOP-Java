@@ -2,6 +2,8 @@ package it.unibo.collections.design;
 
 import it.unibo.collections.design.api.Product;
 import it.unibo.collections.design.api.Warehouse;
+import it.unibo.collections.design.impl.ProductImpl;
+import it.unibo.collections.design.impl.WarehouseImpl;
 
 import java.util.Set;
 
@@ -43,7 +45,7 @@ public final class UseWarehouse {
         final Product p1 = new ProductImpl("p1", 100);
         final Product p2 = new ProductImpl("p2", 30);
         final Product p3 = new ProductImpl("p3", 10);
-        final Warehouse warehouse = null; // new WarehouseImpl();
+        final Warehouse warehouse = new WarehouseImpl();
         warehouse.addProduct(p3);
         assertContentEqualsInAnyOrder(Set.of(p3), warehouse.allProducts());
         warehouse.addProduct(p1);
