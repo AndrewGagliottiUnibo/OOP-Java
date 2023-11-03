@@ -1,6 +1,7 @@
 package it.unibo.collections;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -14,6 +15,14 @@ public final class UseListsAndMaps {
 
     private static final int MAX_VALUE = 1000;
     private static final int FILL_VALUE = 100000;
+    private static final int READ_VALUE = 10_000;
+    private static final long AFRICA_POPULATION = 1_110_635_000L;
+    private static final long AMERICAS_POPULATION = 972_005_000L;
+    private static final long ANTARCTICA_POPULATION = 0L;
+    private static final long ASIA_POPULATION = 4_298_723_000L;
+    private static final long EUROPE_POPULATION = 742_452_000L;
+    private static final long OCEANIA_POPULATION = 38_304_000L;
+    
 
     private UseListsAndMaps() {
     }
@@ -74,7 +83,7 @@ public final class UseListsAndMaps {
         }
 
         time = System.nanoTime() - time;
-        final var millis = TimeUnit.NANOSECONDS.toMillis(time);
+        var millis = TimeUnit.NANOSECONDS.toMillis(time);
         System.out.println(// NOPMD
             "Converting "
                 + list.size()
@@ -93,14 +102,14 @@ public final class UseListsAndMaps {
         }
 
         time = System.nanoTime() - time;
-        final var millis2 = TimeUnit.NANOSECONDS.toMillis(time);
+        millis = TimeUnit.NANOSECONDS.toMillis(time);
         System.out.println(// NOPMD
             "Converting "
                 + list.size()
                 + " ints to String and inserting them in a LinkedList took "
                 + time
                 + "ns ("
-                + millis2
+                + millis
                 + "ms)"
         );
 
@@ -110,7 +119,39 @@ public final class UseListsAndMaps {
          * LinkedList, using the collections of point 5. In order to measure
          * times, use as example TestPerformance.java.
          */
+        time = System.nanoTime();
+
+        for (int i = 0; i < READ_VALUE; i++) {
+            list.get(list.size() / 2);
+        }
+
+        time = System.nanoTime() - time;
+        millis = TimeUnit.NANOSECONDS.toMillis(time);
+        System.out.println(
+            "Reading " + READ_VALUE 
+            + " elements in the middle of an ArrayList took " 
+            + time
+            + "ns ("
+            + millis
+            + "ms)"
+        );
+
+        time = System.nanoTime();
+
+        for (int i = 0; i < READ_VALUE; i++) {
+            list2.get(list2.size() / 2);
+        }
         
+        time = System.nanoTime() - time;
+        millis = TimeUnit.NANOSECONDS.toMillis(time);
+        System.out.println(
+            "Reading " + READ_VALUE 
+            + " elements in the middle of an LinkedList took " 
+            + time
+            + "ns ("
+            + millis
+            + "ms)"
+        );
 
         /*
          * 7) Build a new Map that associates to each continent's name its
@@ -128,8 +169,11 @@ public final class UseListsAndMaps {
          *
          * Oceania -> 38,304,000
          */
+        
+
         /*
          * 8) Compute the population of the world
          */
+        
     }
 }
