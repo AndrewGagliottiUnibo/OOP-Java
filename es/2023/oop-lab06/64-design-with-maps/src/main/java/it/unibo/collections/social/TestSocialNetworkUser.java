@@ -1,6 +1,3 @@
-/**
- * 
- */
 package it.unibo.collections.social;
 
 import it.unibo.collections.social.api.SocialNetworkUser;
