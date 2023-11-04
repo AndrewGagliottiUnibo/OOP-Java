@@ -93,7 +93,7 @@ public final class ArithmeticService {
              * The commandQueue should be cleared, no matter what, when the method exits
              * But how?
              */
-            } finally {
+        } finally {
             commandQueue.clear();
         }
     }
