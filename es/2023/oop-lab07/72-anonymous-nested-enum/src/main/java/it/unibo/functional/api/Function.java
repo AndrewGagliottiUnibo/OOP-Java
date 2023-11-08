@@ -1,5 +1,7 @@
 package it.unibo.functional.api;
 
+import java.util.function.Function;
+
 /**
  * This class models a function of a single parameter as an Object.
  *
@@ -23,7 +25,13 @@ public interface Function<I, O> {
      * @param <T> the input (and output) type of the function
      */
     static <T> Function<T, T> identity() {
-        return null;
-    }
 
+        return new Function<T, T>() {
+            
+            @Override
+            public T call(final T input) {
+                return input;
+            }
+        };
+    }
 }
