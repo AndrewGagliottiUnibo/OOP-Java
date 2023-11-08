@@ -25,17 +25,16 @@ public class IterableWithPolicyImpl<T> implements IterableWithPolicy<T> {
 
             @Override
             public boolean hasNext() {
-                // THinking..
-                return false;
+                if(next() == null) {
+                    throw new NoSuchElementException();
+                }
+                
+                return true;
             }
 
             @Override
             public T next() {
-                if(!hasNext()) {
-                    return elements.get(current++);
-                } else {
-                    throw new NoSuchElementException();
-                }
+                return elements.get(current++);
             }
         };
     }
