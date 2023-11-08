@@ -9,27 +9,54 @@ import it.unibo.inner.api.Predicate;
 public class IterableWithPolicyImpl<T> implements IterableWithPolicy<T> {
 
     private final List<T> elements;
+    private Predicate<T> filter;
+
+    /**
+     * Iterates over the elements that satisfy the given filter.
+     * 
+     * @param elements
+     * @param filter
+     */
+    public IterableWithPolicyImpl(T[] elements, Predicate<T> filter) {
+        this.elements = List.of(elements);
+        this.filter = filter;
+    }
 
     /**
      * Iterates over all the elements. Default version.
+     * 
      * @param elements the elements to iterate.
      */
     public IterableWithPolicyImpl(final T[] elements) {
-        this.elements = List.of(elements);
+        this(elements, new Predicate<>() {
+            @Override
+            public boolean test(T elem) {
+                return true;
+            }
+        });
     }
 
     @Override
     public Iterator<T> iterator() {
-        
+
         return new Iterator<T>() {
 
             private int current = 0;
 
             @Override
             public boolean hasNext() {
+
                 while (current < elements.size()) {
-                    return true;
+
+                    T elem = elements.get(current);
+
+                    if (filter.test(elem)) {
+                        return true;
+                    }
+
+                    current++;
                 }
+
                 return false;
             }
 
@@ -46,6 +73,6 @@ public class IterableWithPolicyImpl<T> implements IterableWithPolicy<T> {
 
     @Override
     public void setIterationPolicy(final Predicate<T> filter) {
-        // empty method
-    }  
+        this.filter = filter;
+    }
 }
