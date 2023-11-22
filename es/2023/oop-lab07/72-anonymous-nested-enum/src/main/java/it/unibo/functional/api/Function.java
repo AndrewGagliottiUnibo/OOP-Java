@@ -1,7 +1,5 @@
 package it.unibo.functional.api;
 
-import java.util.function.Function;
-
 /**
  * This class models a function of a single parameter as an Object.
  *
