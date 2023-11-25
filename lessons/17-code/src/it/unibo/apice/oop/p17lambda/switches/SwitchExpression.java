@@ -4,6 +4,7 @@ import java.util.Optional;
 import java.util.function.*;
 
 public class SwitchExpression {
+    
 
     public static boolean isAGoodDay(WorkDay workday) {
         return switch (workday) {
