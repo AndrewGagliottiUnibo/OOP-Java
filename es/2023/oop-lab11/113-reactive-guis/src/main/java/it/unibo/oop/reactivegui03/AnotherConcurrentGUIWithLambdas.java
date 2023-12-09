@@ -2,8 +2,6 @@ package it.unibo.oop.reactivegui03;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.lang.reflect.InvocationTargetException;
 import java.util.concurrent.TimeUnit;
 
@@ -14,10 +12,10 @@ import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
 /**
- * Third experiment with reactive gui.
+ * Third experiment with reactive gui, solution using lambdas.
  */
 @SuppressWarnings("PMD.AvoidPrintStackTrace")
-public final class AnotherConcurrentGUI extends JFrame {
+public final class AnotherConcurrentGUIWithLambdas extends JFrame {
 
     private static final long serialVersionUID = 1L;
     private static final double WIDTH_PERC = 0.2;
@@ -34,7 +32,8 @@ public final class AnotherConcurrentGUI extends JFrame {
     /**
      * Builds a C3GUI.
      */
-    public AnotherConcurrentGUI() {
+    @SuppressWarnings("CPD-START")
+    public AnotherConcurrentGUIWithLambdas() {
         final Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         this.setSize((int) (screenSize.getWidth() * WIDTH_PERC), (int) (screenSize.getHeight() * HEIGHT_PERC));
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -45,47 +44,26 @@ public final class AnotherConcurrentGUI extends JFrame {
         panel.add(stop);
         this.getContentPane().add(panel);
         this.setVisible(true);
-        up.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(final ActionEvent e) {
-                counterAgent.upCounting();
-            }
-        });
-        down.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(final ActionEvent e) {
-                counterAgent.downCounting();
-            }
-        });
-        stop.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(final ActionEvent e) {
-                AnotherConcurrentGUI.this.stopCounting();
-            }
-        });
+        up.addActionListener(e -> counterAgent.upCounting());
+        down.addActionListener(e -> counterAgent.downCounting());
+        stop.addActionListener(e -> this.stopCounting());
         new Thread(counterAgent).start();
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Thread.sleep(WAITING_TIME);
-                } catch (InterruptedException ex) {
-                    ex.printStackTrace();
-                }
-                AnotherConcurrentGUI.this.stopCounting();
+        new Thread(() -> {
+            try {
+                Thread.sleep(WAITING_TIME);
+            } catch (InterruptedException ex) {
+                ex.printStackTrace();
             }
+            this.stopCounting();
         }).start();
     }
 
     private void stopCounting() {
         counterAgent.stopCounting();
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                stop.setEnabled(false);
-                up.setEnabled(false);
-                down.setEnabled(false);
-            }
+        SwingUtilities.invokeLater(() -> {
+            stop.setEnabled(false);
+            up.setEnabled(false);
+            down.setEnabled(false);
         });
     }
 
@@ -100,12 +78,7 @@ public final class AnotherConcurrentGUI extends JFrame {
             while (!stop) {
                 try {
                     final var nextText = Integer.toString(counter);
-                    SwingUtilities.invokeAndWait(new Runnable() {
-                        @Override
-                        public void run() {
-                            display.setText(nextText);
-                        }
-                    });
+                    SwingUtilities.invokeAndWait(() -> display.setText(nextText));
                     counter += up ? 1 : -1;
                     Thread.sleep(100);
                 } catch (InterruptedException | InvocationTargetException ex) {
